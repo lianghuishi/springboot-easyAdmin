@@ -30,8 +30,10 @@ public class SecurityAspect {
     private static final String LOGINURL = "/admin/login";
     /** 注销的地址，不对注销进行拦截*/
     private static final String LOGINOUTURL = "/admin/loginout";
+    /** 拦截规则 **/
     @Pointcut("execution(public * wang.raye.admin.controller..*.*(..))")
     public void verification() {
+
     }
 
     @Around("verification()")
